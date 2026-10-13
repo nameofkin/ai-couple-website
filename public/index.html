@@ -1,1 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Create romantic AI couple photos and short videos.">
+<title>AI Couple — Romantic Photos & Videos</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="heart">♥</span> AI Couple</a>
+  <nav><a href="#home">Home</a><a href="#generator">Generator</a><a href="#styles">Styles</a><a href="#privacy">Privacy</a></nav>
+  <a class="nav-cta" href="#generator">Try for free</a>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <p class="eyebrow">YOUR MOMENTS, REIMAGINED</p>
+    <h1>Turn your photos into<br><span>romantic memories.</span></h1>
+    <p class="lead">Create sweet couple portraits, gentle kisses, warm embraces and short romantic animations with AI.</p>
+    <div class="hero-actions"><a class="btn primary" href="#generator">✦ Start creating</a><a class="btn secondary" href="#styles">Explore styles</a></div>
+    <div class="trust"><span>♡ Romantic styles</span><span>✦ Photo & video modes</span><span>⌁ Privacy-first design</span></div>
+  </div>
+  <div class="hero-art">
+    <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    <div class="photo-frame"><div class="photo-placeholder"><span>♥</span><b>Your next romantic memory</b><small>Upload a photo to begin</small></div></div>
+    <div class="floating-note">✦ Made for two</div>
+  </div>
+</section>
 
+<section class="section" id="styles">
+  <div class="section-heading"><div><p class="eyebrow">FIND YOUR MOOD</p><h2>Choose a romantic style</h2></div><p>Pick a look, then personalize it in the generator.</p></div>
+  <div class="style-grid">
+    <button class="style-card selected" data-style="Gentle kiss"><div class="style-icon">♡</div><b>Gentle kiss</b><small>Soft, cinematic romance</small></button>
+    <button class="style-card" data-style="Warm embrace"><div class="style-icon">☁</div><b>Warm embrace</b><small>Close and cozy</small></button>
+    <button class="style-card" data-style="Golden-hour date"><div class="style-icon">☼</div><b>Golden-hour date</b><small>Dreamy sunset light</small></button>
+    <button class="style-card" data-style="Romantic portrait"><div class="style-icon">✧</div><b>Romantic portrait</b><small>Elegant photo finish</small></button>
+  </div>
+</section>
+
+<section class="section generator-section" id="generator">
+  <div class="section-heading"><div><p class="eyebrow">CREATE SOMETHING SPECIAL</p><h2>AI Couple Generator</h2></div><span class="free-pill">FREE WEBSITE DEMO</span></div>
+  <div class="generator">
+    <div class="upload-panel">
+      <label class="upload-zone" for="photoInput" id="dropZone">
+        <img id="preview" alt="Uploaded photo preview" hidden>
+        <span class="upload-symbol">↑</span><b>Upload a couple photo</b>
+        <small>Tap to choose JPG, PNG or WebP · Max 8 MB</small>
+        <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp">
+      </label>
+      <div class="privacy-note">🔒 Only upload photos you have permission to use. Avoid sensitive images.</div>
+    </div>
+    <div class="settings-panel">
+      <label class="field-label">What would you like to create?</label>
+      <div class="mode-switch"><button class="mode active" data-mode="image">▧ Photo</button><button class="mode" data-mode="video">▶ Short video</button></div>
+      <label class="field-label" for="styleSelect">Romantic style</label>
+      <select id="styleSelect"><option>Gentle kiss</option><option>Warm embrace</option><option>Golden-hour date</option><option>Romantic portrait</option></select>
+      <label class="field-label" for="prompt">Extra details <span>(optional)</span></label>
+      <textarea id="prompt" rows="3" maxlength="400" placeholder="e.g. soft sunset light, a dreamy garden, cinematic colors…"></textarea>
+      <button class="btn primary generate" id="generateBtn">✦ Generate romantic photo</button>
+      <p class="status" id="status" role="status">This starter includes the website interface. Connect an AI provider to enable real generation.</p>
+      <div id="result" class="result" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="privacy section" id="privacy">
+  <div class="privacy-symbol">♡</div><div><h2>Your photos deserve respect.</h2><p>Use only images of adults who have consented to this use. This starter does not save uploads to a database. Before launch, configure your AI provider, explain its data handling, and add a full privacy policy and deletion process.</p></div>
+</section>
+</main>
+<footer><a class="brand" href="#"><span class="heart">♥</span> AI Couple</a><span>Made for sweet, consensual romance.</span><span>© <span id="year"></span> AI Couple</span></footer>
+<script src="/app.js"></script>
+</body></html>
